@@ -14,6 +14,8 @@ public class GameControl : MonoBehaviour
     public float scrollSpeed = -1.5f;
 
     private int score = 0;
+    public AudioSource audio;
+    public AudioClip FlapClip;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,6 +34,8 @@ public class GameControl : MonoBehaviour
     {
         if (gameOver == true && Input.GetMouseButtonDown (0))
         {
+            audio.clip = FlapClip;
+            audio.Play();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
@@ -52,5 +56,6 @@ public class GameControl : MonoBehaviour
         gameOverText.SetActive(true);
         gameOver = true;
     }
+
 }
 

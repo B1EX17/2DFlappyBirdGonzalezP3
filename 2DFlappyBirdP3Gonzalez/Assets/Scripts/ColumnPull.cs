@@ -13,7 +13,7 @@ public class ColumnPull : MonoBehaviour
     public float columnMax = 3.5f;
 
     private GameObject[] columns;
-    private Vector2 objectPoolPosition = new Vector2(-1f, -11f);
+    private Vector2 objectPoolPosition = new Vector2(-4f, -2f);
     private float timeSinceLastSpawned;
     private float spawnXPosition = 10f;
     private int currentColumn = 0;
